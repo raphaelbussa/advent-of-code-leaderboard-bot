@@ -1,0 +1,29 @@
+/*noinspection CssUnknownTarget*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Work+Sans:ital,wght@0,400;0,550;1,400;1,550&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f23;
+    height: 100vh;
+}
+
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    color: #ffffff;
+}
+
+.content h2 {
+    color: #ffffff;
+}
+
+.content .icons {
+
+}
