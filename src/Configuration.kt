@@ -2,7 +2,7 @@ package com.raphaelbussa
 
 object Configuration {
 
-    val botUsername: String get() = "AdventOfCodeLeaderboardBot"
+    val botUsername: String get() = System.getProperty("AOC_BOT_USERNAME")
     val botToken: String get() = System.getProperty("AOC_BOT_TOKEN")
 
     val dbHost: String get() = System.getProperty("AOC_DB_HOST")

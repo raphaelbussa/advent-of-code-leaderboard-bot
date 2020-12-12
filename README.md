@@ -9,6 +9,7 @@
 Needed properties to run the bot
 
 ```
+AOC_BOT_USERNAME
 AOC_BOT_TOKEN
 AOC_DB_HOST
 AOC_DB_PORT
