@@ -1,0 +1,27 @@
+name: Deploy
+ 
+on:
+  push:
+    branches: [ rc ]
+    
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Build
+        run: ./gradlew build
+
+      - name: Updload
+        run: |
+          eval $(ssh-agent -s)
+          ssh-add <(echo "$SSH_PRIVATE_KEY")
+          mkdir -p ~/.ssh
+          echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+          scp ./build/libs/advent-of-code-leaderboard-bot-fat.jar ubuntu@$SERVER_IP:~
+          ssh ubuntu@$SERVER_IP && /bin/bash ~/deploy.sh advent-of-code-leaderboard-bot-fat.jar && exit
