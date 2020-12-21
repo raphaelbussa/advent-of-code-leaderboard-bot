@@ -18,6 +18,9 @@ jobs:
         with:
           java-version: 8
 
+      - name: Build
+        run: ./gradlew build
+
       - name: Deploy
         uses: marcodallasanta/ssh-scp-deploy@v1.0.0
         with:
