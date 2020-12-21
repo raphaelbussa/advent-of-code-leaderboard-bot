@@ -70,5 +70,5 @@ dependencies {
 shadowJar {
     archiveBaseName.set('advent-of-code-leaderboard-bot-fat')
     archiveClassifier.set('')
-    archiveVersion.set('0.0.1')
+    archiveVersion.set('')
 }
