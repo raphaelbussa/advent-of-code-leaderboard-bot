@@ -1,0 +1,28 @@
+name: Deploy
+ 
+on:
+  push:
+    branches:
+      - 'releases/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup JDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 8
+
+      - name: Deploy
+        uses: marcodallasanta/ssh-scp-deploy@v1.0.0
+        with:
+          local: ./build/libs/advent-of-code-leaderboard-bot-fat.jar
+          host: ${{secrets.SERVER_IP}}
+          user: ${{secrets.SERVER_USER}}
+          key: ${{secrets.SERVER_PRIVATE_KEY}}
+          post_upload: /bin/bash ~/deploy.sh advent-of-code-leaderboard-bot-fat.jar
