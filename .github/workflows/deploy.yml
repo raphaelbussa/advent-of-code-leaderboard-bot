@@ -22,7 +22,7 @@ jobs:
         run: ./gradlew build
 
       - name: Deploy
-        uses: marcodallasanta/ssh-scp-deploy@v1.0.0
+        uses: marcodallasanta/ssh-scp-deploy@v1.0.1
         with:
           local: ./build/libs/advent-of-code-leaderboard-bot-fat.jar
           host: ${{secrets.SERVER_IP}}
