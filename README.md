@@ -41,7 +41,7 @@ Feel free to check [issues page](https://github.com/raphaelbussa/advent-of-code-
 
 ## 🙏Thanks
 
-Thanks to [Marco Dalla Santa](https://github.com/underscore69) for setting up the server and to [Krzysztof Klimkiewicz](https://github.com/krzkz94) for helping me with the CSS
+Thanks to [Marco Dalla Santa](https://github.com/marcodallasanta) for setting up the server and to [Krzysztof Klimkiewicz](https://github.com/krzkz94) for helping me with the CSS
 
 Thanks also to [readme-md-generator](https://github.com/kefranabg/readme-md-generator) for generating this lovely README
 
